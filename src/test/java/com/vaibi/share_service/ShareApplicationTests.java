@@ -1,4 +1,4 @@
-package com.vaibi.share.service;
+package com.vaibi.share_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

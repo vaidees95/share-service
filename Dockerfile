@@ -10,7 +10,7 @@ COPY src ./src
 # Build the application and skip tests for faster builds
 RUN mvn clean package -DskipTests
 
-# Stage 2: Run with Java 24 JRE
+# Stage 2: Run with Java 17 JRE
 FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
