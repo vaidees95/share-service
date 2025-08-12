@@ -1,5 +1,5 @@
-# Stage 1: Build the application using Maven
-FROM eclipse-temurin:24-jdk AS build
+# Stage 1: Build using Maven with Java 24
+FROM maven:3.9.0-eclipse-temurin-24 AS build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY src ./src
 # Build the application and skip tests for faster builds
 RUN mvn clean package -DskipTests
 
-# Stage 2: Run the application using the Java 24 JRE
+# Stage 2: Run with Java 24 JRE
 FROM eclipse-temurin:24-jre-alpine
 
 WORKDIR /app
