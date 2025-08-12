@@ -1,5 +1,5 @@
-# Stage 1: Build using Maven with Java 24
-FROM maven:3.9.0-eclipse-temurin-24 AS build
+# Stage 1: Build with Maven and Java 17
+FROM maven:3.9.0-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
